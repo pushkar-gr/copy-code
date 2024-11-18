@@ -33,12 +33,7 @@ document.addEventListener('keydown', function(event) {
         behavior: 'smooth',
         block: 'center'
       });
-    }
-  } else if (event.ctrlKey && event.shiftKey && event.key === 'Y') {
-    event.preventDefault();
-    const element = elements[index];
-    if (element) {
-      element.parentElement.querySelector('.py-1').click();
+      element.parentElement.querySelector('.py-1').focus();
     }
   }
 });
