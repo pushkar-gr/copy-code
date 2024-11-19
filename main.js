@@ -1,5 +1,4 @@
 let index = null;
-const elements = document.querySelectorAll('.p-4');
 
 document.addEventListener('keydown', function(event) {
   if (event.ctrlKey && event.shiftKey && (event.key === 'J' || event.key === 'K')) {
