@@ -10,6 +10,9 @@ document.addEventListener('keydown', function(event) {
           index = i;
         }
       }
+      if (index === null) {
+        index = elements.length - 1;
+      }
     } else {
       let element = elements[index];
       if (element && element.classList.contains('green-border-copy-code')) {
