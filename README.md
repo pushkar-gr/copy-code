@@ -11,5 +11,5 @@
 <ul>
   <li><code>ctrl + shift + j</code> for next code</li>
   <li><code>ctrl + shift + k</code> for previous code</li>
-  <li><code>ctrl + shift + enter</code> to copy code</li>
+  <li><code>ctrl + shift + enter</code> or <code>space</code> to copy code</li>
 </ul><br/>
