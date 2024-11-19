@@ -1,9 +1,21 @@
 let index = null;
+let firstElement = null;
 
-document.addEventListener('keydown', function(event) {
+function keyDown(event) {
   if (event.ctrlKey && event.shiftKey && (event.key === 'J' || event.key === 'K')) {
     event.preventDefault();
     const elements = document.querySelectorAll('.p-4');
+    if (elements.length === 0) {
+      return;
+    }
+    if (firstElement === null) {
+      firstElement = elements[0];
+    } else if (firstElement !== elements[0]) {
+      index = null;
+      firstElement = null;
+      keyDown(event);
+      return;
+    }
     if (index == null) {
       for (let i = 0; i < elements.length; i++) {
         if (isElementInViewport(elements[i])) {
@@ -38,7 +50,9 @@ document.addEventListener('keydown', function(event) {
       element.parentElement.querySelector('.py-1').focus();
     }
   }
-});
+}
+
+document.addEventListener('keydown', keyDown);
 
 function isElementInViewport(element) {
     const rect = element.getBoundingClientRect();
